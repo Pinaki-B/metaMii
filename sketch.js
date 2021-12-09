@@ -183,6 +183,10 @@ function errData(err) {
 
 function submitData() {
   console.log("Submitted character!")
+  if (nameInput.value() == "") {
+    submitText.html("Please input a name!")
+    return;
+  }
   let creation = {
     name: nameInput.value(),
     customization: {
